@@ -1,8 +1,5 @@
-import Data from '@/Data'
-import CowCard from '@/components/CowCard'
-import Footer from '@/components/Footer'
-import NavBar from '@/components/Navbar'
-
+import CowCard from '../components/CowCard'
+import Data from '../Data'
 export default function Home() {
   return (
     <div className=" grid justify-center grid-cols-1 sm:grid-cols-2 items-center">
