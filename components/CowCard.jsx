@@ -2,7 +2,7 @@ import React from 'react'
 
 const CowCard = ({ Data }) => {
   return (
-    <div className="w-[50vw] mx-auto">
+    <div className="w-[100vw] sm:w-[50vw] mx-auto">
       <div className="flex items-center justify-center ">
         <div className="max-w-sm w-full sm:w-full lg:w-full py-6 px-3 ">
           <div className=" bg-white  text-black rounded-lg overflow-hidden border-2 border-gray-100">
