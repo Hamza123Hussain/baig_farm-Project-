@@ -10,15 +10,15 @@ const NavBar = () => {
       <div className="w-full text-black backdrop-blur-sm dark-mode:text-gray-200 dark-mode:bg-gray-800 ">
         <div className="flex flex-col max-w-screen-xl  mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
           <div className="flex flex-row items-center gap-2 ">
-            <img
-              src="WhatsApp_Image_2024-04-28_at_21.05.39_6b5e3355-removebg-preview.png"
-              alt=""
-              className=" w-12 mt-2"
-            />
             <a
               href="/"
-              className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+              className=" flex items-center gap-2 text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
             >
+              <img
+                src="WhatsApp_Image_2024-04-28_at_21.05.39_6b5e3355-removebg-preview.png"
+                alt=""
+                className=" w-12 mt-2"
+              />
               Baig Cattle Farm
             </a>
           </div>
