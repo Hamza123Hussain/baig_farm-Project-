@@ -16,7 +16,7 @@ const CowCard = ({ Data }) => {
               </p>
               <p className=" text-sm sm:text-lg text-gray-800">
                 {' '}
-                Price {Data.Price} / KG
+                Price {Data.Price} <sub> Per KG</sub>{' '}
               </p>
             </div>
           </div>
