@@ -4,7 +4,6 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 
 const NavBar = () => {
-  const [open, setOpen] = useState(true)
   const { data: session } = useSession()
 
   const Signinorout = () => {
