@@ -1,13 +1,22 @@
 'use client'
 import { useSession } from 'next-auth/react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const CowCard = ({ Data }) => {
   const { data: session } = useSession()
-  const [sold, setsold] = useState(false)
+  const [sold, setsold] = useState(() => {
+    // Initialize 'sold' state from local storage if available, otherwise default to false
+    const storedSold = localStorage.getItem(`sold-${Data.id}`)
+    return storedSold ? JSON.parse(storedSold) : false
+  })
 
   const sell = () => {
-    session.user?.name ? setsold(!sold) : ''
+    // Check if the user is authenticated before toggling the sold state
+    if (session?.user?.name) {
+      setsold(!sold)
+      // Save the 'sold' state to local storage
+      localStorage.setItem(`sold-${Data.id}`, JSON.stringify(!sold))
+    }
   }
 
   return (
