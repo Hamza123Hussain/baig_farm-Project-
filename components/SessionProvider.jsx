@@ -1,10 +1,10 @@
-'use client'
-import { SessionProvider, useSession } from 'next-auth/react'
-import React from 'react'
+// 'use client'
+// import { SessionProvider, useSession } from 'next-auth/react'
+// import React from 'react'
 
-export const NextAuthProvider = ({ children }) => {
-  return <SessionProvider>{children}</SessionProvider>
-}
+// export const NextAuthProvider = ({ children }) => {
+//   return <SessionProvider>{children}</SessionProvider>
+// }
 /**
 A SessionProvider in the context of authentication libraries like NextAuth.js provides a way to manage and provide access to session-related data within your application. Here's what it does:
 
