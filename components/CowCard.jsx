@@ -1,31 +1,29 @@
 'use client'
 import { collection, doc, getFirestore, updateDoc } from 'firebase/firestore'
 // import { useSession } from 'next-auth/react'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { app } from '../FirebaseConfig'
 import { useUser } from '@clerk/nextjs'
-import { useRouter } from 'next/navigation'
 
 const CowCard = ({ Data }) => {
-  const router = useRouter()
   const { user } = useUser()
-  const sellstatus = async (ID) => {
-    const db = getFirestore(app)
-    const docRef = doc(
-      collection(
-        db,
-        'Users',
-        user?.primaryEmailAddress.emailAddress,
-        'Cattle Data'
-      ),
-      ID
-    )
 
-    await updateDoc(docRef, {
-      Sold: true,
-    })
+  const sellstatus = async (DOC) => {
+    if (
+      user?.primaryEmailAddress.emailAddress == '70110719@student.uol.edu.pk'
+    ) {
+      const db = getFirestore(app)
+      const docRef = doc(
+        collection(db, 'Users', '70110719@student.uol.edu.pk', 'Cattle Data'),
+        DOC.id
+      )
 
-    window.location.reload() // Refresh the page
+      await updateDoc(docRef, {
+        Sold: !DOC.Sold,
+      })
+
+      window.location.reload() // Refresh the page
+    }
   }
 
   return (
@@ -55,10 +53,15 @@ const CowCard = ({ Data }) => {
               </p>
             </div>
             <button
-              onClick={() => sellstatus(Data.id)}
+              onClick={() => sellstatus(Data)}
               className={`py-2 w-full ${
                 Data.Sold ? 'bg-gray-500' : 'bg-green-400'
-              } text-black`}
+              } ${
+                user?.primaryEmailAddress.emailAddress ==
+                  '70110719@student.uol.edu.pk' || 'Shahmeeriqbal104@gmail.com'
+                  ? 'cursor-pointer'
+                  : 'cursor-default'
+              }   text-black`}
             >
               {Data.Sold ? 'SOLD' : 'UNSOLD'}
             </button>
