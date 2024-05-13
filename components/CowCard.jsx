@@ -10,7 +10,8 @@ const CowCard = ({ Data }) => {
 
   const sellstatus = async (DOC) => {
     if (
-      user?.primaryEmailAddress.emailAddress == '70110719@student.uol.edu.pk'
+      user?.primaryEmailAddress.emailAddress == '70110719@student.uol.edu.pk' ||
+      user?.primaryEmailAddress.emailAddress === 'shahmeeriqbal104@gmail.com'
     ) {
       const db = getFirestore(app)
       const docRef = doc(
