@@ -35,8 +35,7 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className=" flex gap-3 justify-center items-center min-h-screen">
-        <span className="loader"></span> <span className="loader"></span>{' '}
+      <div className=" flex gap-2 justify-center items-center min-h-screen">
         <span className="loader"></span> <span className="loader"></span>{' '}
         <span className="loader"></span>
       </div>
