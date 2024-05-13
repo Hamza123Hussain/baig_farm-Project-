@@ -144,6 +144,9 @@ const Page = () => {
           <p className="text-red-600 text-xl font-bold ">
             This page is for Admin Only
           </p>
+          <div className=" flex justify-center items-center gap-3">
+            <UserButton /> {user?.fullName}
+          </div>
           <button
             onClick={() => router.push('/')}
             className=" w-fit p-4 rounded-lg bg-green-500 text-white"
