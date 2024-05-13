@@ -1,6 +1,5 @@
 // data.js
-
-const Data = [
+export const Data = [
   {
     id: 1,
     Image: '1.jpg',
