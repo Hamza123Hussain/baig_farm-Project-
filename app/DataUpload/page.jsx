@@ -45,7 +45,7 @@ const Page = () => {
     <>
       {/* If the user's email is one of the specified emails, display the content */}
       {user?.primaryEmailAddress.emailAddress ===
-        'Shahmeeriqbal104@gmail.com' ||
+        'shahmeeriqbal104@gmail.com' ||
       user?.primaryEmailAddress.emailAddress ===
         '70110719@student.uol.edu.pk' ? (
         <div className="bg-gray-100">
