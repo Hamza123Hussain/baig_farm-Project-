@@ -46,10 +46,31 @@ export default function Home() {
     console.log('User history:', cowdata)
   }
   return (
-    <div className=" flex flex-col justify-center items-center ">
-      <h1 className="sm:mt-5 text-[9px] sm:text-4xl  bg-gradient-to-r from-black to-black text-transparent bg-clip-text mb-10 sm:mb-0  sm:py-10 px-2">
-        THE FINAL PRICES WILL BE DECIDED AT THE TIME OF PURCHASE
-      </h1>
+    <div className=" flex flex-col justify-center items-center gap-4 ">
+      <div className=" sm:flex-row flex-col  flex  items-center sm:gap-2 justify-between sm:mt-28 ">
+        <div className=" sm:w-[70vw] flex items-center">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/598px-WhatsApp_icon.png"
+            alt=""
+            className=" w-12"
+          />
+          <h3>+92 324 7868008</h3>
+        </div>
+        <div className="bg-gradient-to-r from-purple-600 to-red-600 font-[sans-serif] p-4">
+          <div className="container mx-auto flex flex-col justify-center items-center">
+            <p className="text-white text-base text-center">
+              Qurbani share available
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3
+        className=" text-xs sm:text-lg
+      "
+      >
+        Prices are negotiable according to animal selection
+      </h3>
 
       <div className=" grid justify-center grid-cols-1 sm:grid-cols-2 items-center">
         {cowdata.map((ele) => {
